@@ -217,7 +217,7 @@ import styled from 'styled-components';
 const Element = styled.<element>`<style>`
 ```
 where element is any available html element.\
-Inside the `\`` then goes the css style that must apply only to this object.\
+Inside the `<style>` then goes the css style that must apply only to this object.\
 The returned `Element` is a special component and all the properties 
 belonging to the same normale one can be used.
 

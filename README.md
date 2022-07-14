@@ -33,6 +33,11 @@ if is change from the previous step, the new code.
     - [Styled Components](./02%20-%20Conditional%20Content%20And%20Styling/readme.md#styled-components)
     - [CSS Modules](./02%20-%20Conditional%20Content%20And%20Styling/readme.md#css-modules)
 
+- [Debugging](./03%20-%20Debugging/readme.md)
+    - [Error Messages](./03%20-%20Debugging/readme.md#error-messages)
+    - [Breakpoints](./03%20-%20Debugging/readme.md#breakpoints)
+    - [React DevTools](./03%20-%20Debugging/readme.md#react-devtools)
+
 
 
 
