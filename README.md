@@ -45,6 +45,14 @@ if is change from the previous step, the new code.
     - [Portals](./04%20-%20Fragments%20And%20Portals/readme.md#portals)
     - [Refs](./04%20-%20Fragments%20And%20Portals/readme.md#refs)
 
+- [Context And Effects](./05%20-%20Context%20And%20Effects/readme.md)
+    - [Local Storage](./05%20-%20Context%20And%20Effects/readme.md#local-storage)
+    - [useEffect](./05%20-%20Context%20And%20Effects/readme.md#useeffect)
+    - [useReducer](./05%20-%20Context%20And%20Effects/readme.md#usereducer)
+    - [Context](./05%20-%20Context%20And%20Effects/readme.md#context)
+    - [Hooks Usage](./05%20-%20Context%20And%20Effects/readme.md#hooks-usage)
+    - [useImperativeHandle](./05%20-%20Context%20And%20Effects/readme.md#useimperativehandle)
+
 
 
 
