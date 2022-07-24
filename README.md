@@ -53,6 +53,14 @@ if is change from the previous step, the new code.
     - [Hooks Usage](./05%20-%20Context%20And%20Effects/readme.md#hooks-usage)
     - [useImperativeHandle](./05%20-%20Context%20And%20Effects/readme.md#useimperativehandle)
 
+- [Optimizations And Class Components](./06%20-%20Optimizations%20And%20Class%20Components/readme.md)
+    - [Components Evaluation](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#components-evaluation)
+    - [Prevent Re-evaluation](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#prevent-re-evaluation)
+    - [useCallback](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#usecallback)
+    - [State Updates And Scheduling](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#state-updates-and-scheduling)
+    - [useMemo](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#usememo)
+    - [Class Components](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#class-components)
+    - [Error Boundaries](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#error-boundaries)
 
 
 
