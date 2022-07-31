@@ -62,6 +62,13 @@ if is change from the previous step, the new code.
     - [Class Components](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#class-components)
     - [Error Boundaries](./06%20-%20Optimizations%20And%20Class%20Components/readme.md#error-boundaries)
 
+- [Http](./07%20-%20Http/readme.md)
+    - [REST API](./07%20-%20Http/readme.md#rest-api)
+    - [GET](./07%20-%20Http/readme.md#get)
+    - [Loading State](./07%20-%20Http/readme.md#loading-state)
+    - [Errors](./07%20-%20Http/readme.md#errors)
+    - [Fetch On Load](./07%20-%20Http/readme.md#fetch-on-load)
+    - [POST](./07%20-%20Http/readme.md#post)
 
 
 
