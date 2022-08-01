@@ -70,6 +70,15 @@ if is change from the previous step, the new code.
     - [Fetch On Load](./07%20-%20Http/readme.md#fetch-on-load)
     - [POST](./07%20-%20Http/readme.md#post)
 
+# Custom Hooks
+- [Custom Hooks](./08%20-%20Custom%20Hooks/readme.md)
+    - [Definition](./08%20-%20Custom%20Hooks/readme.md#definition)
+    - [Usage](./08%20-%20Custom%20Hooks/readme.md#usage)
+    - [State Access](./08%20-%20Custom%20Hooks/readme.md#state-access)
+    - [Configuration](./08%20-%20Custom%20Hooks/readme.md#configuration)
+    - [Server](./08%20-%20Custom%20Hooks/readme.md#server)
+    - [Http Custom Hook](./08%20-%20Custom%20Hooks/readme.md#http-custom-hook)
+
 
 
 
