@@ -83,6 +83,12 @@ if is change from the previous step, the new code.
     - [Validation](./09%20-%20Forms/readme.md#validation)
     - [Custom Input Hook](./09%20-%20Forms/readme.md#custom-input-hook)
 
+- [Assignments](./10%20-%20Assignments/readme.md)
+    - [Assignment 01](./10%20-%20Assignments/readme.md#assignment-01)
+    - [Assignment 02](./10%20-%20Assignments/readme.md#assignment-02)
+    - [Assignment 03](./10%20-%20Assignments/readme.md#assignment-03)
+    - [Assignment 04](./10%20-%20Assignments/readme.md#assignment-04)
+    - [Assignment 05](./10%20-%20Assignments/readme.md#assignment-05)
 
 
 
