@@ -90,6 +90,16 @@ if is change from the previous step, the new code.
     - [Assignment 04](./10%20-%20Assignments/readme.md#assignment-04)
     - [Assignment 05](./10%20-%20Assignments/readme.md#assignment-05)
 
+- [Course Project](./11%20-%20Course%20Project/readme.md)
+    - [CSS Modules](./11%20-%20Course%20Project/readme.md#css-modules)
+    - [Local Images](./11%20-%20Course%20Project/readme.md#local-images)
+    - [Object Props Forwarding](./11%20-%20Course%20Project/readme.md#object-props-forwarding)
+    - [Modals](./11%20-%20Course%20Project/readme.md#modals)
+    - [Context](./11%20-%20Course%20Project/readme.md#context)
+    - [REST API](./11%20-%20Course%20Project/readme.md#rest-api)
+    - [Get Request](./11%20-%20Course%20Project/readme.md#get-request)
+    - [Form Validation](./11%20-%20Course%20Project/readme.md#form-validation)
+    - [Submit Order](./11%20-%20Course%20Project/readme.md#submit-order)
 
 
 

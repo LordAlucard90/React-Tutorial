@@ -1,0 +1,53 @@
+{
+  "meals": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "description": "The real Italian one",
+      "price": 11.99
+    },
+    {
+      "id": 2,
+      "name": "Double Cheese Burger",
+      "description": "Double cheese, double Yum!",
+      "price": 15.99
+    },
+    {
+      "id": 3,
+      "name": "Sushi",
+      "description": "Tokyo's style!",
+      "price": 23.99
+    }
+  ],
+  "orders": [
+    {
+      "user": {
+        "name": "Pinco",
+        "street": "Pallino",
+        "postCode": "12345",
+        "city": "Pinco Pallinolia"
+      },
+      "oderItems": [
+        {
+          "id": 1,
+          "name": "Pizza",
+          "amount": 1,
+          "price": 11.99
+        },
+        {
+          "id": 2,
+          "name": "Double Cheese Burger",
+          "amount": 1,
+          "price": 15.99
+        },
+        {
+          "id": 3,
+          "name": "Sushi",
+          "amount": 1,
+          "price": 23.99
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
