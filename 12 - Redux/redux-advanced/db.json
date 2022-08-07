@@ -1,0 +1,28 @@
+{
+  "carts": [
+    {
+      "items": [
+        {
+          "id": 1,
+          "price": 6,
+          "quantity": 3,
+          "totalPrice": 18
+        },
+        {
+          "id": 2,
+          "price": 7,
+          "quantity": 2,
+          "totalPrice": 14
+        },
+        {
+          "id": 3,
+          "price": 42,
+          "quantity": 1,
+          "totalPrice": 42
+        }
+      ],
+      "totalQuantity": 6,
+      "id": 0
+    }
+  ]
+}

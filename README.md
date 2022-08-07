@@ -101,5 +101,19 @@ if is change from the previous step, the new code.
     - [Form Validation](./11%20-%20Course%20Project/readme.md#form-validation)
     - [Submit Order](./11%20-%20Course%20Project/readme.md#submit-order)
 
+- [Redux](./12%20-%20Redux/readme.md)
+    - [Context VS Redux](./12%20-%20Redux/readme.md#context-vs-redux)
+    - [Setup](./12%20-%20Redux/readme.md#setup)
+    - [Store](./12%20-%20Redux/readme.md#store)
+    - [Class Components](./12%20-%20Redux/readme.md#class-components)
+    - [Action Payload](./12%20-%20Redux/readme.md#action-payload)
+    - [Redux Toolkit](./12%20-%20Redux/readme.md#redux-toolkit)
+    - [Multiple States](./12%20-%20Redux/readme.md#multiple-states)
+    - [REST API](./12%20-%20Redux/readme.md#rest-api)
+    - [Cart Persistence](./12%20-%20Redux/readme.md#cart-persistence)
+    - [Action Creator Thunk](./12%20-%20Redux/readme.md#action-creator-thunk)
+    - [Fetch Cart](./12%20-%20Redux/readme.md#fetch-cart)
+    - [Redux DevTools](./12%20-%20Redux/readme.md#redux-devtools)
+
 
 
