@@ -1,0 +1,38 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "author": "Tizio",
+      "text": "Some quote from Tizio."
+    },
+    {
+      "id": 2,
+      "author": "Caio",
+      "text": "Some quote from Caio."
+    },
+    {
+      "id": 3,
+      "author": "Sempronio",
+      "text": "Some quote from Sempronio."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "comments": []
+    },
+    {
+      "comments": [],
+      "id": 2
+    },
+    {
+      "comments": [
+        {
+          "text": "First comment to Sempronio",
+          "id": 0
+        }
+      ],
+      "id": 3
+    }
+  ]
+}
