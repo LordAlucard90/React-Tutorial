@@ -128,4 +128,10 @@ if is change from the previous step, the new code.
     - [REST API](./13%20-%20React%20Router/readme.md#rest-api)
     - [React Router 6](./13%20-%20React%20Router/readme.md#react-router-6)
 
+- [Deploy](./14%20-%20Deploy/readme.md)
+    - [Setup](./14%20-%20Deploy/readme.md#setup)
+    - [Lazy Loading](./14%20-%20Deploy/readme.md#lazy-loading)
+    - [Build](./14%20-%20Deploy/readme.md#build)
+    - [Hosting](./14%20-%20Deploy/readme.md#hosting)
+
 
