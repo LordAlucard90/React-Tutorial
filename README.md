@@ -143,5 +143,15 @@ if is change from the previous step, the new code.
     - [Keep Auth State](./15%20-%20Authentication/readme.md#keep-auth-state)
     - [Auto Logout](./15%20-%20Authentication/readme.md#auto-logout)
 
+- [Animations](./16%20-%20Animations/readme.md)
+    - [CSS Transictions](./16%20-%20Animations/readme.md#css-transictions)
+    - [CSS Animations](./16%20-%20Animations/readme.md#css-animations)
+    - [CSS Limitations](./16%20-%20Animations/readme.md#css-limitations)
+    - [React Transiction Group](./16%20-%20Animations/readme.md#react-transiction-group)
+    - [Transition](./16%20-%20Animations/readme.md#transition)
+    - [CSSTransition](./16%20-%20Animations/readme.md#csstransition)
+    - [TransictionGroup](./16%20-%20Animations/readme.md#transictiongroup)
+    - [Alternatives](./16%20-%20Animations/readme.md#alternatives)
+
 
 
