@@ -114,6 +114,7 @@ if is change from the previous step, the new code.
     - [Action Creator Thunk](./12%20-%20Redux/readme.md#action-creator-thunk)
     - [Fetch Cart](./12%20-%20Redux/readme.md#fetch-cart)
     - [Redux DevTools](./12%20-%20Redux/readme.md#redux-devtools)
+    - [Replace Redux With Hooks](./12%20-%20Redux/readme.md#replace-redux-with-hooks)
 
 - [React Router](./13%20-%20React%20Router/readme.md)
     - [Setup](./13%20-%20React%20Router/readme.md#setup)

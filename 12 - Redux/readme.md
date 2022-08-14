@@ -14,6 +14,7 @@
 - [Action Creator Thunk](#action-creator-thunk)
 - [Fetch Cart](#fetch-cart)
 - [Redux DevTools](#redux-devtools)
+- [Replace Redux With Hooks](#replace-redux-with-hooks)
 
 ---
 
@@ -666,4 +667,255 @@ in order to see the state, the state history, the action history,
 the diff from the previous state and so on directly on the browser.
 
 The tab is available in the Browser DevTools under Redux.
+
+## Replace Redux With Hooks
+
+### Using React Context
+
+It is possible to obtain the same bahaciour of redux just using the context api.
+
+Context definition
+```javascript
+const DUMMY_PRODUCTS = [ /* ... */ ];
+
+const ProductsContext = createContext({
+    products: [],
+    toggleFavorite: productId => { },
+});
+
+export const ProductsContextProvider = props => {
+    const [productsList, setProductsList] = useState(DUMMY_PRODUCTS);
+
+    const toggleFavorite = productId => {
+        setProductsList(currentList => {
+            const prodIndex = currentList.findIndex(p => p.id === productId);
+            const newFavStatus = !currentList[prodIndex].isFavorite;
+            const updatedProducts = [...productsList];
+            updatedProducts[prodIndex] = {
+                ...currentList[prodIndex],
+                isFavorite: newFavStatus,
+            };
+            return updatedProducts;
+        });
+    };
+
+    return (
+        <ProductsContext.Provider
+            value={{ products: productsList, toggleFavorite: toggleFavorite }}>
+            {props.children}
+        </ProductsContext.Provider>
+    );
+};
+
+export default ProductsContext;
+```
+Provide at root level:
+```javascript
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <ProductsContextProvider>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </ProductsContextProvider>,
+);
+```
+Retreive the products list:
+```javascript
+const Products = props => {
+    // const productList = useSelector(state => state.shop.products);
+    const productList = useContext(ProductsContext).products;
+
+    return (
+        <ul className='products-list'>
+            {productList.map(prod => ( /* ... */))}
+        </ul>
+    );
+};
+
+const Favorites = props => {
+    // const favoriteProducts = useSelector(state =>
+    //   state.shop.products.filter(p => p.isFavorite)
+    // );
+    const favoriteProducts = useContext(ProductsContext).products.filter(p => p.isFavorite);
+    // ...
+};
+```
+Update the list status:
+```javascript
+const ProductItem = props => {
+    // const dispatch = useDispatch();
+    const { toggleFavorite } = useContext(ProductsContext);
+
+    const toggleFavHandler = () => {
+        // dispatch(toggleFav(props.id));
+        toggleFavorite(props.id);
+    };
+
+    return ( /* ... */);
+};
+```
+
+The context api is not meant for high frequency updates.
+Therefore it works but is not optimized at all, because all components are
+notified of a change even if not directly affected by it.
+
+### Using Custom Hooks
+
+It is possible to create an hook that act as redux in this way;
+```javascript
+let globalState = {};
+let listeners = [];
+let actions = [];
+
+export const useStore = () => {
+    // create a new listener for the component
+    const [_, setState] = useState(globalState);
+
+    // define a function that take an actionIdentifier
+    const dispatch = (actionIdentifier, payload) => {
+        // runs the corrresponding action from the actions lists
+        // by passing the current state and an optional payload
+        const newState = actions[actionIdentifier](globalState, payload);
+        // updates the global state with the updated state of the action
+        globalState = { ...globalState, ...newState };
+        // notifies all teh listener with the new state
+        for (const listener of listeners) {
+            listener(globalState);
+        }
+    };
+
+    useEffect(() => {
+        // attach the new component listener to the global listeners list
+        listeners.push(setState);
+
+        // removes the componer listener when the componenets unmounts
+        return () => {
+            listeners = listeners.filter(cur => cur !== setState);
+        };
+    }, [setState]);
+
+    return [globalState, dispatch];
+};
+
+// accept dynamic user configuration
+export const initStore = (userActions, initialState) => {
+    if (!!initialState) {
+        globalState = { ...globalState, ...initialState };
+    }
+    actions = { ...actions, ...userActions };
+};
+```
+it is possible to configure the store in this way:
+```javascript
+const initialState = {
+    products: [ /* ... */ ],
+};
+
+const configureStore = () => {
+    const actions = {
+        TOGGLE_FAVORITE: (curState, productId) => {
+            const prodIndex = curState.products.findIndex(p => p.id === productId);
+            const newFavStatus = !curState.products[prodIndex].isFavorite;
+            const updatedProducts = [...curState.products];
+            updatedProducts[prodIndex] = {
+                ...state.products[prodIndex],
+                isFavorite: newFavStatus,
+            };
+            return {
+                products: updatedProducts,
+            };
+        },
+    };
+    initStore(actions, initialState);
+};
+
+export default configureStore;
+```
+it is possible to configure the store in the `index.js` just in this way:
+```javascript
+configureProductsStore()
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);
+```
+In the end it is possible to use the new hook to get the data:
+```javascript
+const Products = props => {
+    const [{ products: productList }, _] = useStore();
+
+    return (
+        <ul className='products-list'>
+            {productList.map(prod => (
+                // ...
+            ))}
+        </ul>
+    );
+};
+
+const Favorites = props => {
+    const [{ products: productList }, _] = useStore();
+    const favoriteProducts = productList.filter(p => p.isFavorite);
+
+    let content = <p className='placeholder'>Got no favorites yet!</p>;
+    if (favoriteProducts.length > 0) {
+        content = (
+            <ul className='products-list'>
+                {favoriteProducts.map(prod => (
+                    // ...
+                ))}
+            </ul>
+        );
+    }
+    return content;
+};
+```
+and dispatch actions:
+```javascript
+const ProductItem = props => {
+    const [_, dispatch] = useStore()
+
+    const toggleFavHandler = () => {
+        dispatch("TOGGLE_FAVORITE", props.id)
+    };
+
+    return (
+        // ...
+    );
+};
+```
+In order to do not rerender every time on components that only uses the dispatch
+function, it is possible to modify the hook in this way:
+```javascript
+export const useStore = (shouldListen = true) => {
+    // ...
+    useEffect(() => {
+        // attach only if requested
+        if (shouldListen) {
+            listeners.push(setState);
+        }
+
+        return () => {
+            // remove accordantly
+            if (shouldListen) {
+                listeners = listeners.filter(cur => cur !== setState);
+            }
+        };
+    }, [setState, shouldListen]); // updated dependencies
+
+    // ...
+};
+```
+and in the component, with `React.memo` becomes:
+```javascript
+const ProductItem = React.memo(props => {
+    const [_, dispatch] = useStore(false)
+
+    // ...
+});
+```
 
