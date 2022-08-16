@@ -163,5 +163,14 @@ if is change from the previous step, the new code.
     - [Mocks](./18%20-%20Unit%20Tests/readme.md#mocks)
     - [Other Resources](./18%20-%20Unit%20Tests/readme.md#other-resources)
 
+- [Typescript](./19%20-%20TypeScript/readme.md)
+    - [Intro](./19%20-%20TypeScript/readme.md#intro)
+    - [React Installation](./19%20-%20TypeScript/readme.md#react-installation)
+    - [Components](./19%20-%20TypeScript/readme.md#components)
+    - [Data Props](./19%20-%20TypeScript/readme.md#data-props)
+    - [Forms](./19%20-%20TypeScript/readme.md#forms)
+    - [State](./19%20-%20TypeScript/readme.md#state)
+    - [Styling](./19%20-%20TypeScript/readme.md#styling)
+    - [Context](./19%20-%20TypeScript/readme.md#context)
 
 
