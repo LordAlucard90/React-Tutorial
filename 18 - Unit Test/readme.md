@@ -3,7 +3,7 @@
 ## Content
 
 - [Basics](#basics)
-- [First Test](#First Test)
+- [First Test](#first-test)
 - [Testing Suites](#testing-suites)
 - [Nested Components](#nested-components)
 - [Asynchronous Tests](#asynchronous-tests)
